@@ -1,11 +1,10 @@
-/* Basic reset */
+
 body, h1, form, label, input, textarea, select {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body background */
 body.bgimage {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -13,13 +12,13 @@ body.bgimage {
     text-align: center;
 }
 
-/* Heading */
+
 h1 {
     color: #007bff;
     margin-bottom: 20px;
 }
 
-/* Form styling */
+
 form {
     width: 600px;
     background-color: #fff;
@@ -30,14 +29,13 @@ form {
     text-align: left;
 }
 
-/* Labels */
+
 label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
 }
 
-/* Input fields */
 input[type="text"],
 input[type="date"],
 textarea,
@@ -49,12 +47,11 @@ select {
     border-radius: 3px;
 }
 
-/* Gender dropdown */
+
 select {
     background-color: #f9f9f9;
 }
 
-/* Submit and Reset buttons */
 input[type="submit"],
 input[type="reset"] {
     width: 48%;
