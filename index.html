@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registration Form</title>
+</head>
+<body class="bgimage">
+    <script>
+        function validateform() {
+            var firstname = document.forms["registrationForm"]["firstname"].value;
+            var lastname = document.forms["registrationForm"]["lastname"].value;
+            var dob = document.forms["registrationForm"]["dob"].value;
+            var contact = document.forms["registrationForm"]["contact"].value;
+            var address = document.forms["registrationForm"]["address"].value;
+            var pincode = document.forms["registrationForm"]["pincode"].value;
+            var state = document.forms["registrationForm"]["state"].value;
+            var country = document.forms["registrationForm"]["country"].value;
+            var gender = document.forms["registrationForm"]["gender"].value;
+
+            if (firstname == "") {
+                alert("First Name must be filled out");
+                return false;
+            }
+
+            if (lastname == "") {
+                alert("Last Name must be filled out");
+                return false;
+            }
+
+            if (gender == "") {
+                alert("Please select a gender");
+                return false;
+            }
+
+            if (dob == "") {
+                alert("Please select your Date of Birth");
+                return false;
+            }
+
+            if (contact == "" || contact.length < 10 ) {
+                alert("Contact number must be at least 10 digits");
+                return false;
+            }
+
+            if (address == "") {
+                alert("Address must be filled out");
+                return false;
+            }
+
+            if (pincode == "") {
+                alert("Pin Code must be filled out");
+                return false;
+            }
+
+            if (state == "") {
+                alert("State must be selected");
+                return false;
+            }
+
+            if (country == "") {
+                alert("Country must be selected");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+    
+    <h1>Registration Form</h1>
+    <form name="registrationForm" onsubmit="return validateform()">
+        <label for="first-name">First Name:</label>
+        <input type="text" name="firstname"><br><br>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" name="lastname"><br><br>
+
+        <label for="gender">Gender:</label>
+        <select name="gender">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br><br>
+
+        <label for="subject">Subject of Interest:</label>
+        <input type="text" name="subject"><br><br>
+
+        <label for="language">Language Known:</label>
+        <input type="text" name="language"><br><br>
+
+        <label for="dob">Date of Birth (dd-mm-yyyy):</label>
+        <input type="date" name="dob"><br><br>
+
+        <label for="contact">Contact Number:</label>
+        <input type="text" name="contact"><br><br>
+
+        <label for="address">Address:</label>
+        <textarea name="address" rows="4"></textarea><br><br>
+
+        <label for="pincode">Pin Code:</label>
+        <input type="text" name="pincode"><br><br>
+
+        <label for="state">State:</label>
+        <input type="text" name="state"><br><br>
+
+        <label for="country">Country:</label>
+        <input type="text" name="country"><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
